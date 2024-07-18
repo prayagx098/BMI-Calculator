@@ -54,7 +54,7 @@ function calculateBMI() {
     if(username==''){
         welcomeGreet.innerHTML = `Hello User ,`
     }else{
-        welcomeGreet.innerHTML = `Hello, ${username}`
+        welcomeGreet.innerHTML = `Hello ${username} ,`
     }
 
     if(result=='NaN'){
