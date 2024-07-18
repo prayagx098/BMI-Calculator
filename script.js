@@ -106,7 +106,7 @@ function calculateBMI() {
 
         const utterance = new SpeechSynthesisUtterance(audioT);
 
-        utterance.pitch = 1.9; //  0 to 2
+        utterance.pitch = 1.5; //  0 to 2
         utterance.rate = 0.9; //   0.1 to 10
         utterance.volume = 2; //   0 to 1
 
