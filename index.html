@@ -81,7 +81,7 @@
                         <div class="col-auto">
                             <h5 style="font-family: Iceberg, sans-serif;" class="mt-4">Name:</h5>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-8">
                             <input class="form-control mt-4 ms-2" type="text" id="userName" placeholder="First Name">
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                         <div class="col-auto">
                             <h5 style="font-family: Iceberg, sans-serif;" class="mt-5">Age:</h5>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-4">
                             <input class="form-control mt-5 ms-4" id="age" type="text" placeholder="Age">
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                         </div>
                         <div class="col-4">
                             <label style="font-family: Iceberg, sans-serif;" for="inputPassword" class="col-md-4 col-form-label">Height</label>
-                            <input class="form-control  ms-2" type="text" id="height" placeholder="cms">
+                            <input class="form-control" type="text" id="height" placeholder="cms">
                         </div>
                     </div>
 
@@ -114,6 +114,7 @@
                             <button style="font-family: Iceberg, sans-serif;" class="formbtn  mt-5 mb-4" data-bs-target="#exampleModalToggle" onclick="calculateBMI()" data-bs-toggle="modal">Calculate <img style="width: 20px;" src="./calc.svg" alt="" srcset=""></button>
                         </div>
                     </div>
+                    <span style="color: rgb(88, 88, 88);">Healthy BMI range is between 18.5 kg/m<sup>2</sup> and 255 kg/m<sup>2</sup></span>
                 </div>
             </div>
         </div>
@@ -130,14 +131,15 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="modalFirstSection col-6">
-                        <img src="./doctor.png" alt="" srcset="">
+                        <img class="mt-5" src="./doctor.png" alt="" srcset="">
                     </div>
                     <div class="modalSecondSection col-6">
+                        <img style="width: 100px;" id="resultImage" src="./sad-emoji.png" alt="">
                         <div class="colorBox">
-                            <h5 id="Output" class="mt-4">You Have 21 BM</h5>
+                            <h5 id="Output" class="mt-2">You Have BM</h5>
                         </div>
-                        <p id="OutputDef" class="mt-5">Your Body Weight is Optimal</p>
-                        <img id="resultImage" src="./sad-emoji.png" alt="">
+                        <p id="OutputDef" class="mt-2">Your Body Weight is Optimal</p>
+                        <p id="advice"></p>
                     </div>
                 </div>
             </div>
