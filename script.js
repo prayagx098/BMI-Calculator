@@ -38,7 +38,7 @@ function calculateBMI() {
 
     welcomeGreet.innerHTML = `Hello, ${username}`
 
-    resultView.innerHTML = `Your BMI is : ${result}`
+    resultView.innerHTML = `BMI value is : ${result}`
 
     console.log(result);
 

@@ -26,6 +26,8 @@
 
     <!-- Google Fonts -->
 
+    <!-- Header Content -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,17 +61,20 @@
 </head>
 <body>
 
+    <!-- Header -->
+    <div class="headingContainer">
+        <h1 class="mainText text-center">B M<img class="headingImg mb-4 me-2" src="./capsule.png" alt=""> CALCULATOR</h1>
+    </div>
+    <!-- End of Header -->
+
     <!-- Content -->
-    <div class="container">
-        <div class="headingContainer">
-            <h1 class="mainText text-center"><span style="font-weight: 900; color: rgb(57, 57, 57); text-shadow: 2px 2px 10px rgb(201, 201, 201);">B M<span><img class="headingImg mb-4 me-2" src="./capsule.png" alt=""></span></span> CALCULATOR</h1>
-        </div>
+    <div class="container mt-5">
         <div class="row">
             <div class="leftSection col-md-6">
                <img src="./kit-health-technology-and-digital-health-solutions.gif" alt="">
             </div>
             <div class="col-md-6">
-                <div class="formBox text-center">
+                <div class="formBox text-center mb-5">
                     <h1 style="font-family: Roboto Condensed, sans-serif;" class="text-light bg-dark text-center pt-4">Input the Details</h1>
 
                     <div class="row mt-4 ms-3">
@@ -94,58 +99,55 @@
                         <div class="col-auto">
                             <h5 style="font-family: Iceberg, sans-serif;" class="mt-5">Details:</h5>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-4">
                             <label style="font-family: Iceberg, sans-serif;" for="inputPassword" class="col-md-4 col-form-label">Weight</label>
                             <input class="form-control " type="text" id="weight" placeholder="kg">
                         </div>
-                        <div class="col-auto">
+                        <div class="col-4">
                             <label style="font-family: Iceberg, sans-serif;" for="inputPassword" class="col-md-4 col-form-label">Height</label>
-                            <input class="form-control" type="text" id="height" placeholder="cms">
+                            <input class="form-control  ms-2" type="text" id="height" placeholder="cms">
                         </div>
                     </div>
 
                     <div class="buttonBox row">
                         <div class="col-auto">
-                            <button style="font-family: Iceberg, sans-serif;" class="formbtn  mt-5" data-bs-target="#exampleModalToggle" onclick="calculateBMI()" data-bs-toggle="modal">Calculate</button>
+                            <button style="font-family: Iceberg, sans-serif;" class="formbtn  mt-5 mb-4" data-bs-target="#exampleModalToggle" onclick="calculateBMI()" data-bs-toggle="modal">Calculate</button>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </div>
 
- <!-- Modal -->
- <div class="modal fade" id="exampleModalToggle" aria-hidden="true" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div id="ModalColor" class="modal-content text-center">
-        <div class="modal-header text-center">
-          <h1 class="modal-title fs-4 text-center" id="exampleModalToggleLabel">Hello User!</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="row">
-                <div class="modalFirstSection col-6">
-                    <img src="./doctor.png" alt="" srcset="">
-                </div>
-                <div class="modalSecondSection col-6">
-                    <div class="colorBox">
-                        <h5 id="Output" class="mt-4">You Have 21 BM</h5>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+        <div id="ModalColor" class="modal-content text-center">
+            <div class="modal-header text-center">
+            <h1 class="modal-title fs-4 text-center" id="exampleModalToggleLabel">Hello User!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="modalFirstSection col-6">
+                        <img src="./doctor.png" alt="" srcset="">
                     </div>
-                    <p id="OutputDef" class="mt-5">Your Body Weight is Optimal</p>
-                    <img id="resultImage" src="./sad-emoji.png" alt="">
-                    <!-- <img src="./smile.png" alt=""> -->
+                    <div class="modalSecondSection col-6">
+                        <div class="colorBox">
+                            <h5 id="Output" class="mt-4">You Have 21 BM</h5>
+                        </div>
+                        <p id="OutputDef" class="mt-5">Your Body Weight is Optimal</p>
+                        <img id="resultImage" src="./sad-emoji.png" alt="">
+                    </div>
                 </div>
             </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-bs-target="#exampleModalToggle" onclick="Refreshpage()" data-bs-toggle="modal">Check New</button>
+            </div>
         </div>
-        <div class="modal-footer">
-            <button class="btn btn-danger" data-bs-target="#exampleModalToggle" onclick="Refreshpage()" data-bs-toggle="modal">Check New</button>
         </div>
-      </div>
     </div>
-  </div>
- <!-- End Of Modal -->
+    <!-- End Of Modal -->
 
     <!-- End of Content -->
 
