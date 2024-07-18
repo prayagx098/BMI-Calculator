@@ -28,14 +28,20 @@ function calculateBMI() {
     result=bmi.toFixed(2);
 
     if(result<=24.9 && result>=18.5){
-        discription.innerHTML = "Your BMI is Optimal"
+        discription.innerHTML = "Your weight is Optimal"
         resultView.style.backgroundColor = 'greenyellow'
         resultView.style.borderRadius = '10px'
         confetti()
-    }else if(result>=24.9 && result<=18.5){
-        discription.innerHTML = "Your BMI is not Optimal"
+    }else if(result>=24.9 || result<=18.5){
         resultView.style.backgroundColor = 'red'
         resultView.style.borderRadius = '10px'
+
+        if(result>=24.9){
+            discription.innerHTML = "Your are Overweighted"
+        }else{
+            discription.innerHTML = "You have to Increse Your weight"
+        }
+
     }else{
         discription.innerHTML = "Enter a valid Number"
         resultView.style.backgroundColor = 'yellow'
@@ -62,15 +68,14 @@ function calculateBMI() {
     // To change the image in the modal
 
     // Define the condition
-    if (bmi > 25) {
+    if (bmi < 18.5 || bmi > 25) {
         imageElement.src = 'sad-emoji.png';
-    } else if (bmi < 18.5) {
-        imageElement.src = 'sad-emoji.png';
-    } else if(25>=bmi>=18.5){
+    } else if (bmi >= 18.5 && bmi <= 25) {
         imageElement.src = 'smile.png';
-    }else {
+    } else {
         imageElement.src = 'confused.png';
     }
+    
 }
 
 
