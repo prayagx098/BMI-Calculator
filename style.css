@@ -34,9 +34,14 @@ body{
 }
 
 .leftSection img{
-    width: 400px;
+    width: 450px;
 }
-
+/* media query */
+@media screen and (max-width: 1024px) {
+    .leftSection img {
+        width: 350px;
+    }
+}
 
 
 .formBox{
@@ -82,6 +87,7 @@ body{
 .modalFirstSection img{
     height: 300px;
 }
+
 
 
 .modalSecondSection .colorBox{

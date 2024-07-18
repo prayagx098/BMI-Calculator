@@ -15,7 +15,9 @@ function calculateBMI() {
     let resultView = document.getElementById('Output');
     
     if (age <= 0 || weight <= 0 || height <= 0) {
-        alert("enter a valid input");
+        // alert("enter a valid input");
+        console.log("Error code:400 'error in value' ")
+        resultView.innerHTML = `SORRY`
     }
 
     
@@ -30,18 +32,31 @@ function calculateBMI() {
         resultView.style.backgroundColor = 'greenyellow'
         resultView.style.borderRadius = '10px'
         confetti()
-    }else{
+    }else if(result>=24.9 && result<=18.5){
         discription.innerHTML = "Your BMI is not Optimal"
         resultView.style.backgroundColor = 'red'
         resultView.style.borderRadius = '10px'
+    }else{
+        discription.innerHTML = "Enter a valid Number"
+        resultView.style.backgroundColor = 'yellow'
+        resultView.style.borderRadius = '10px'
     }
 
-    welcomeGreet.innerHTML = `Hello, ${username}`
+    // console.log(username);
 
-    resultView.innerHTML = `BMI value is : ${result}`
 
-    console.log(result);
+    if(username==''){
+        welcomeGreet.innerHTML = `Hello User ,`
+    }else{
+        welcomeGreet.innerHTML = `Hello, ${username}`
+    }
 
+    if(result=='NaN'){
+        resultView.innerHTML = `SORRY`
+    }else{
+        resultView.innerHTML = `BMI value is : ${result}`
+    }
+    
     
 
     // To change the image in the modal
@@ -51,8 +66,10 @@ function calculateBMI() {
         imageElement.src = 'sad-emoji.png';
     } else if (bmi < 18.5) {
         imageElement.src = 'sad-emoji.png';
-    } else {
+    } else if(25>=bmi>=18.5){
         imageElement.src = 'smile.png';
+    }else {
+        imageElement.src = 'confused.png';
     }
 }
 
