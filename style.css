@@ -12,18 +12,23 @@ body{
     background-size: cover;
 }
 
+
+
+/* Heading Section */
+
+
+
 .headingContainer{
-    background: linear-gradient(135deg, rgba(98, 186, 154, 0.641), rgba(1, 223, 186, 0.367));
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgb(22, 119, 148), rgb(0, 153, 115));
+    border: 10px groove rgba(255, 255, 255, 0.18);
+    box-shadow: 2px 8px 22px rgba(30, 48, 46, 0.37);
     color: aliceblue;
     height: 80px;
     width: 100%;
 }
 
 .headingContainer h1{
+    font-family: "Coiny", system-ui;
     font-weight: 700;
     padding: 10px;
 }
@@ -33,8 +38,17 @@ body{
     width: 40px;
 }
 
+/* End Of Heading Section */
+
+
+
+
+/* Content Section */
+
+
+
 .leftSection img{
-    width: 450px;
+    width: 500px;
 }
 /* media query */
 @media screen and (max-width: 1024px) {
@@ -81,6 +95,9 @@ body{
     align-items: center;
 }
 
+/* End Of Content Section */
+
+
 
 /* MODAL SECTION */
 
@@ -99,3 +116,4 @@ body{
 .modalSecondSection img{
     width: 150px;
 }
+/* End Of Modal Section */

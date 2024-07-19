@@ -3,18 +3,26 @@
 
 function calculateBMI() {
 
-    const imageElement = document.getElementById('resultImage');
+    // initialisation for validation within the script
+    
     let adviceText = '';
     let adviceNote = '';
+
+
+    // initialisation for collecting the value from the page
+
+    const imageElement = document.getElementById('resultImage');
     let username = document.getElementById('userName').value;
     let weight = document.getElementById('weight').value;
     let height = document.getElementById('height').value;
     let age = document.getElementById('age').value;
 
+
+    // initialising for changing the value in the page
+
     let welcomeGreet = document.getElementById('exampleModalToggleLabel');
     let discription = document.getElementById('OutputDef');
     let resultView = document.getElementById('Output');
-    let dAvuce = document.getElementById('advice');
     
     if (age <= 0 || weight <= 0 || height <= 0) {
         // alert("enter a valid input");
@@ -28,6 +36,9 @@ function calculateBMI() {
 
 
     result=bmi.toFixed(2);
+
+
+    // value check under condition for colour, speech text ,advise and background change.
 
     if(result<=24.9 && result>=18.5){
         discription.innerHTML = "Your weight is Optimal"
@@ -71,6 +82,8 @@ function calculateBMI() {
     // console.log(username);
 
 
+    // to validate the username in the modal
+
     if(username==''){
         welcomeGreet.innerHTML = `Hello User ,`
     }else{
@@ -89,7 +102,7 @@ function calculateBMI() {
 
     // To change the image in the modal
 
-    // Define the condition
+
     if (bmi < 18.5 || bmi > 25) {
         imageElement.src = 'sad-emoji.png';
     } else if (bmi >= 18.5 && bmi <= 25) {
@@ -98,8 +111,17 @@ function calculateBMI() {
         imageElement.src = 'confused.png';
     }
 
-    
+
+
+
+    // Function Calling for speech
+
     speakText()
+
+
+
+
+    // Function for Adivice Speech
 
     function speakText() {
         let audioT = `Hello ${username}. ${adviceText} .`;
@@ -116,11 +138,9 @@ function calculateBMI() {
 
 
 
+// Function to Refresh Page on new selection
+
 function Refreshpage(){
     window.location='./index.html'
 }
 
-//   onclick="confetti()"
-
-
-// 18.5 and 24.9 kg/m2
