@@ -3,6 +3,7 @@
     box-sizing: border-box;
     padding: 0%;
     margin: 0%;
+    cursor: url('./casual-life-3d-cursor.png'), auto;
 }
 
 body{
@@ -10,6 +11,7 @@ body{
     background: url(https://en.idei.club/uploads/posts/2023-05/thumbs/1685488925_en-idei-club-p-medical-background-dizain-pinterest-1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: url('./casual-life-3d-cursor.png'), auto;
 }
 
 
@@ -22,6 +24,7 @@ body{
     background: linear-gradient(135deg, rgb(22, 119, 148), rgb(0, 153, 115));
     border: 10px groove rgba(255, 255, 255, 0.18);
     box-shadow: 2px 8px 22px rgba(30, 48, 46, 0.37);
+    cursor: pointer;
     color: aliceblue;
     height: 80px;
     width: 100%;
@@ -45,10 +48,20 @@ body{
 
 /* Content Section */
 
+.mainContent{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 5px;
+}
 
 
 .leftSection img{
-    width: 500px;
+    width: 200px;
+    height: 450px;
 }
 /* media query */
 @media screen and (max-width: 1024px) {
@@ -59,13 +72,33 @@ body{
 
 
 .formBox{
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
     -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); */
+    background-color: aliceblue;
     border-radius: 20px;
+    transition: all 0.2s;
+    animation-name: zoom;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
+
+@keyframes zoom {
+    0%   {
+        transform: scale(100%);
+        box-shadow: 2px 2px 2px black;
+    }
+    50%  {
+        transform: scale(101%);
+        box-shadow: 2px 2px 5px black;
+    }
+    100% {
+        transform: scale(100%);
+        box-shadow: 2px 2px 2px black;
+    }
+  }
 
 
 

@@ -118,9 +118,6 @@ function calculateBMI() {
 
     speakText()
 
-
-
-
     // Function for Adivice Speech
 
     function speakText() {
